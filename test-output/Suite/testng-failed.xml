@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="Reportname" value="Report"/>
+  <listeners>
+    <listener class-name="Utility.Listener"/>
+    <listener class-name="Utility.AnnotationTransformer"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="LTCPOfficel.Secure_Report_Paymentgatewaytest">
+        <methods>
+          <include name="setup"/>
+          <include name="OpenBrowser"/>
+          <include name="closebrowser"/>
+          <include name="Secure_Report_payment_Testcase" invocation-numbers="0 0"/>
+        </methods>
+      </class> <!-- LTCPOfficel.Secure_Report_Paymentgatewaytest -->
+      <class name="LTCPOfficel.Secure_Report_Payment_Consolidationtest">
+        <methods>
+          <include name="setup"/>
+          <include name="OpenBrowser"/>
+          <include name="Secure_Report_PaymentConsolidation_Testcase" invocation-numbers="0"/>
+          <include name="closebrowser"/>
+        </methods>
+      </class> <!-- LTCPOfficel.Secure_Report_Payment_Consolidationtest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

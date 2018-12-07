@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<parameter name="Reportname" value="validation_test_Report"/>
+
+<listeners>
+  	<listener class-name="Utility.Listener"></listener>
+  	<listener class-name="Utility.AnnotationTransformer"></listener>
+  </listeners>
+
+  <test thread-count="1" name="Test">
+    <classes>
+        <class name="field_validation.C_Reg_page_Validation"/>
+        <class name="field_validation.C_Login_page_Validation"/>
+        <class name="field_validation.C_UserUpdate_page_Validation"/>
+        <class name="field_validation.C_ChangePass_page_Validation"/>
+        <class name="field_validation.Secure_Login_page_Validation"/>
+      <class name="field_validation.Secure_UpdateCourier_page_Validation"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

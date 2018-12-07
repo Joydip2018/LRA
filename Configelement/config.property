@@ -1,0 +1,16 @@
+URL=http://122.49.211.14:8080/PWP/
+BaseURL=http://122.49.211.14:8080
+GmailUrl=https://accounts.google.com/
+GmailUsername=joydip.ilfs@gmail.com
+Gmailpassword=Test@123
+Username=pclerk1
+password=Hello@123
+Browser=chrome
+SecureURL=http://192.168.127.108:9094/LTCPSECURE_Manila_Dev
+
+
+
+URL1=http://192.168.127.108:9094/PWP/
+BaseURL1=http://192.168.127.108:9094
+
+SecureURL1=http://192.168.127.108:9094/LTCPSECURE/

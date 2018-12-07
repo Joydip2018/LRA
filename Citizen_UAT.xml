@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite1">
+  <parameter name="Reportname" value="Citizen_test_Report"/>
+
+  <listeners>
+  	<listener class-name="Utility.Listener"></listener>
+  	<listener class-name="Utility.AnnotationTransformer"></listener>
+  </listeners>
+  
+ <test thread-count="1" name="Test">
+    <classes>
+      <class name="LTCPS.Project.NewCertificatetest"/>
+          </classes>
+  </test>
+    <test thread-count="1" name="Test1">
+    <classes>
+      <class name="LTCPS.Project.Myrequest_MakepaymentTest"/>
+          </classes>
+  </test>
+      <test thread-count="1" name="Test2">
+    <classes>
+      <class name="LTCPS.Project.UpdateProfileTest"/>
+                </classes>
+  </test>
+        <test thread-count="1" name="Test3">
+    <classes>
+      <class name="LTCPS.Project.ChangePassTest"/>
+    </classes>
+  </test>
+  <test thread-count="1" name="Test4">
+    <classes>
+      <class name="LTCPS.Project.Logouttest"/>
+    </classes>
+  </test>
+  
+  <!-- Test -->
+</suite> <!-- Suite -->

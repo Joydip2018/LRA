@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+ <parameter name="Reportname" value="Report"/>
+  <listeners>
+  	<listener class-name="Utility.Listener"></listener>
+  	<listener class-name="Utility.AnnotationTransformer"></listener>
+  </listeners>
+  <test name="Test">
+    <classes>
+      <class name="LTCPOfficel.Secure_Report_Paymentgatewaytest"/>
+      <class name="LTCPOfficel.Secure_Report_couriertest"/>
+      <class name="LTCPOfficel.Secure_Report_Package_FileTest"/>
+      <class name="LTCPOfficel.Secure_Report_Transection_monitortest"/>
+      <class name="LTCPOfficel.Secure_Report_Payment_Consolidationtest"/>
+     <!--  <class name="LTCPOfficel.Secure_Report_Accountabletest"/> -->    
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

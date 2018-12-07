@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite1]">
+  <parameter name="Reportname" value="regression_test_Report"/>
+  <listeners>
+    <listener class-name="Utility.Listener"/>
+    <listener class-name="Utility.AnnotationTransformer"/>
+  </listeners>
+  <test thread-count="5" name="Test2(failed)">
+    <classes>
+      <class name="LTCPS.Project.UpdateProfileTest">
+        <methods>
+          <include name="closebrowser"/>
+          <include name="setup"/>
+          <include name="Updateprofile_Testcase" invocation-numbers="0"/>
+          <include name="OpenBrowser"/>
+        </methods>
+      </class> <!-- LTCPS.Project.UpdateProfileTest -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+</suite> <!-- Failed suite [Suite1] -->
