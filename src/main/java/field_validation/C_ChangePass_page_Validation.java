@@ -23,7 +23,7 @@ public class C_ChangePass_page_Validation extends Baseclass
 	public Object[][] sheetdetails() throws Exception
 	{
 		Object[][] testObjArray=Baseclass.read(0);
-	   	System.out.println("joy" +testObjArray);
+	   	System.out.println(testObjArray);
 	   	return (testObjArray);   	
 	}
 	/*****************************************************************/

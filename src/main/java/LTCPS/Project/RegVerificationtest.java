@@ -24,10 +24,10 @@ public class RegVerificationtest
 		RegVerification GL= new RegVerification();
 		GL.Glogin(str3[5], str3[6], Driver);
 		String Parent=Driver.getWindowHandle();
-		System.out.println(Parent);
+		//System.out.println(Parent);
 		Set<String> allwindow=Driver.getWindowHandles();
 		int count=allwindow.size();
-		System.out.println(count);
+		//System.out.println(count);
 		for(String child:allwindow)
 		{
 			if(!Parent.equalsIgnoreCase(child))

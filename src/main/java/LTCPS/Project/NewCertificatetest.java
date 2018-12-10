@@ -22,7 +22,7 @@ public class NewCertificatetest extends Baseclass
 	@Test(dataProvider = "ReadData")//(enabled = false)
 	public void NewCertificate_Testcase(String Data1, String Data2, String Data3) throws Exception
 	{
-		System.out.println("kishore"+Data1);
+		System.out.println(Data1);
 		System.out.println(Data2);
 		Logintest ln=new Logintest();
 		ln.Login_testcase(Data1,Data2);
@@ -56,7 +56,7 @@ public class NewCertificatetest extends Baseclass
 	public Object[][] sheetdetails() throws Exception
 	{
 		Object[][] testObjArray=Baseclass.read(0);
-	   	System.out.println("joy" +testObjArray);
+	   	System.out.println(testObjArray);
 	   	return (testObjArray);   	
 	}
 	/*****************************************************************/

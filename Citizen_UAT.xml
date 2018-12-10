@@ -21,14 +21,19 @@
       <test thread-count="1" name="Test2">
     <classes>
       <class name="LTCPS.Project.UpdateProfileTest"/>
-                </classes>
+    </classes>
   </test>
-        <test thread-count="1" name="Test3">
+  <test thread-count="1" name="Test3">
     <classes>
       <class name="LTCPS.Project.ChangePassTest"/>
     </classes>
   </test>
-  <test thread-count="1" name="Test4">
+   <test thread-count="1" name="Test4">
+   <classes>
+      <class name="LTCPS.Project.Transaction_monitortest"/>
+    </classes>
+  </test>
+  <test thread-count="1" name="Test5">
     <classes>
       <class name="LTCPS.Project.Logouttest"/>
     </classes>
