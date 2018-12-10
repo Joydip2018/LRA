@@ -26,8 +26,8 @@ public class RegVerificationtest
 		String Parent=Driver.getWindowHandle();
 		//System.out.println(Parent);
 		Set<String> allwindow=Driver.getWindowHandles();
-		//int count=allwindow.size();
-		//System.out.println(count);
+		int count=allwindow.size();
+		System.out.println(count);
 		for(String child:allwindow)
 		{
 			if(!Parent.equalsIgnoreCase(child))
