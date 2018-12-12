@@ -8,7 +8,7 @@
   	<listener class-name="Utility.AnnotationTransformer"></listener>
   </listeners>
   
- <test thread-count="1" name="Test">
+<!-- <test thread-count="1" name="Test">
     <classes>
       <class name="LTCPS.Project.NewCertificatetest"/>
           </classes>
@@ -32,7 +32,7 @@
    <classes>
       <class name="LTCPS.Project.Transaction_monitortest"/>
     </classes>
-  </test>
+  </test>-->
   <test thread-count="1" name="Test5">
     <classes>
       <class name="LTCPS.Project.Logouttest"/>
