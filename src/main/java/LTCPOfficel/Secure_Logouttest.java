@@ -1,9 +1,7 @@
 package LTCPOfficel;
 
 import org.openqa.selenium.By;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import configuration.Baseclass;
 import configuration.Secure_Baseclass;
 
 public class Secure_Logouttest extends Secure_Baseclass
@@ -28,23 +26,4 @@ public class Secure_Logouttest extends Secure_Baseclass
 	* End
 	*/
 	/*****************************************************************/
-	/*****************************************************************/
-	/*
-	* This bellow function helps pass data to MakePayment_Testcase from excel sheet.
-	* And call the read function from configuration/Baseclass.class.
-	* @author Joydip.Bhattacharjee
-	*/
-	/*****************************************************************/
-	@DataProvider(name = "ReadData")
-	public Object[][] sheetdetails() throws Exception
-	{
-		Object[][] testObjArray=Baseclass.read(0);
-	   	return (testObjArray);   	
-	}
-	/*****************************************************************/
-	/*
-	* End
-	*/
-	/*****************************************************************/
-
 }

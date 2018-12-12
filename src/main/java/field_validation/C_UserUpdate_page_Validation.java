@@ -2,7 +2,7 @@ package field_validation;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
+//import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import LTCPS.Project.Logintest;
 import Screen.UpdateUser;
@@ -17,13 +17,13 @@ public class C_UserUpdate_page_Validation extends Baseclass
 	* @author Joydip.Bhattacharjee
 	*/
 	/*****************************************************************/
-	@DataProvider(name = "ReadData") 
+	/*@DataProvider(name = "ReadData") 
 	public Object[][] sheetdetails() throws Exception
 	{
 		Object[][] testObjArray=Baseclass.read(0);
 	   	System.out.println(testObjArray);
 	   	return (testObjArray);   	
-	}
+	}*/
 	/*****************************************************************/
 	/*
 	* End
@@ -36,11 +36,13 @@ public class C_UserUpdate_page_Validation extends Baseclass
 	* @author Joydip.Bhattacharjee
 	*/
 	/******************************************************************/
-	@Test(dataProvider = "ReadData")//(enabled=false)
-	public void C_UserUpdate_Mobileno_Validation(String Data1, String Data2, String Data3) throws Exception
+	@Test//(dataProvider = "ReadData")//(enabled=false)
+	public void C_UserUpdate_Mobileno_Validation() throws Exception
 	{
 		Logintest ln=new Logintest();
-		ln.Login_testcase(Data1,Data2);
+		String Username=Cellread(0,1,0);
+		String Password=Cellread(0,1,1);
+		ln.Login_testcase(Username,Password);
 		//Call functions from Screen/UpdateUser.class with the help of "UU" object.	
 		String[] invalidChars = {"A", "a","123456789"};
 		UpdateUser UU=PageFactory.initElements(Driver, UpdateUser.class);
@@ -76,12 +78,14 @@ public class C_UserUpdate_page_Validation extends Baseclass
 	* @author Joydip.Bhattacharjee
 	*/
 	/******************************************************************/
-	@Test(dataProvider = "ReadData")//(enabled=false)
-	public void C_UserUpdate_Email_Validation(String Data1, String Data2, String Data3) throws Exception
+	@Test//(dataProvider = "ReadData")//(enabled=false)
+	public void C_UserUpdate_Email_Validation() throws Exception
 	{
 		
 		Logintest ln=new Logintest();
-		ln.Login_testcase(Data1,Data2);
+		String Username=Cellread(0,1,0);
+		String Password=Cellread(0,1,1);
+		ln.Login_testcase(Username,Password);
 		//Call functions from Screen/UpdateUser.class with the help of "UU" object.
 		String[] invalidWorrds = {"plainaddress", "#@%^%#$@#$@#.com", 
 									"@domain.com", "email.domain.com", 

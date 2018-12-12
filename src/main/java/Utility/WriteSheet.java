@@ -27,7 +27,7 @@ public class WriteSheet
 		Datasheet =Workbook.getSheetAt(sheetno);		
 		int Rowc= Datasheet.getLastRowNum();
 		Rowc=Rowc+1;	
-		for(int i=0; i<Rowc; i++)
+		for(int i=1; i<Rowc; i++)
 		{			
 			//System.out.println(Rowc+"Joy");
 			Datasheet.getRow(i).createCell(cellNo).setCellValue(value);

@@ -2,9 +2,9 @@ package LTCPOfficel;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import Screen.Secure_Transection_monitor;
+import configuration.Baseclass;
 import configuration.Secure_Baseclass;
 
 public class Secure_Transection_monitortest extends Secure_Baseclass
@@ -17,34 +17,19 @@ public class Secure_Transection_monitortest extends Secure_Baseclass
 	* @author Joydip.Bhattacharjee
 	*/
 	/*****************************************************************/
-	@Test(dataProvider = "ReadData")//(enabled = false)
-	public void Secure_Transmonitor_Testcase(String Data1,String Data2, String Data3) throws Exception
+	@Test//(dataProvider = "ReadData")//(enabled = false)
+	public void Secure_Transmonitor_Testcase() throws Exception
 	{
 		JavascriptExecutor js = (JavascriptExecutor) Driver;
 		secure_Logintest ln=new secure_Logintest();
 		ln.Login_testcase();
 		Secure_Transection_monitor  STM=PageFactory.initElements(Driver, Secure_Transection_monitor.class);
+		Baseclass BC=new Baseclass();
+		String Data3=BC.Cellread(0,1,2);
 		STM.Search_Transaction(Data3);
 		js.executeScript("window.scrollBy(0,1000)");
 		Thread.sleep(2000);
 	}
-	/*****************************************************************/
-	/*
-	* End
-	*/
-	/*****************************************************************/
-	/*
-	* This bellow function helps pass data to Secure_Transmonitor_Testcase from excel sheet.
-	* And call the read function from configuration/Secure_Baseclass.class.
-	* @author Joydip.Bhattacharjee
-	*/
-	/*****************************************************************/
-	@DataProvider(name = "ReadData") 
-	public Object[][] sheetdetails() throws Exception
-	    {
-			Object[][] testObjArray=Secure_Baseclass.read(0);
-	    	return (testObjArray);   	
-	    }
 	/*****************************************************************/
 	/*
 	* End

@@ -3,6 +3,9 @@ package configuration;
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.ArrayList;
+
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.AfterMethod;
@@ -66,7 +69,7 @@ public class Baseclass extends Basesuit
 		int Col= Datasheet.getRow(0).getLastCellNum();
 		Rowc=Rowc+1;
 		Object[][] Data= new Object[Rowc][Col];		
-		for(int i=0; i<Rowc; i++)
+		for(int i=1; i<Rowc; i++)
 		{
 			for(int j=0; j<Col; j++)
 			{	
@@ -76,6 +79,16 @@ public class Baseclass extends Basesuit
 			UserData.clear();
 		}
 		return Data;		
+	}
+	
+	public String Cellread( int sheetnum, int Rownum, int Colnum) throws Exception
+	{
+		Workbook =new XSSFWorkbook(src);
+		Datasheet =Workbook.getSheetAt(sheetnum);			
+		XSSFRow Rowc= Datasheet.getRow(Rownum);
+		XSSFCell Col= Rowc.getCell(Colnum);
+		String Data= Col.getStringCellValue();	
+		return Data;  	
 	}
 	/*****************************************************************/
 	/*

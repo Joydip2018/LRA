@@ -28,7 +28,7 @@
       <class name="LTCPS.Project.ChangePassTest"/>
     </classes>
   </test>
- <!--  <test thread-count="1" name="Test4">
+ <test thread-count="1" name="Test4">
     <classes>
       <class name="LTCPOfficel.Secure_PrintCertificatetest"/>
     </classes>
@@ -48,11 +48,11 @@
       <class name="LTCPOfficel.Secure_Transection_monitortest"/>
     </classes>
   </test>
-         <test thread-count="1" name="not run Test8">
+ <!-- <test thread-count="1" name="don't run Test8">
     <classes>
       <class name="LTCPS.Project.Secure_Logouttest"/>
     </classes>
-  </test>
+  </test> -->
         <test thread-count="1" name="Test9">
     <classes>
       <class name="LTCPS.Project.Transaction_monitortest"/>
@@ -62,7 +62,7 @@
     <classes>
       <class name="LTCPS.Project.Logouttest"/>
     </classes>
-  </test> -->
+  </test>
   
   <!-- Test -->
 </suite> <!-- Suite -->

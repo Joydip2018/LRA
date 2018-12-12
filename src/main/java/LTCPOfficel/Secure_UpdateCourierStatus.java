@@ -2,9 +2,9 @@
 package LTCPOfficel;
 
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import Screen.Secure_UpdatecourierStatus;
+import configuration.Baseclass;
 import configuration.Secure_Baseclass;
 
 public class Secure_UpdateCourierStatus extends Secure_Baseclass
@@ -17,12 +17,14 @@ public class Secure_UpdateCourierStatus extends Secure_Baseclass
 	* @author Joydip.Bhattacharjee
 	*/
 	/*****************************************************************/
-	@Test(dataProvider = "ReadData")//(enabled = false)
-	public void UpdateCourierStatus_Testcase(String Data1,String Data2, String Data3) throws Exception
+	@Test//(dataProvider = "ReadData")//(enabled = false)
+	public void UpdateCourierStatus_Testcase() throws Exception
 	{
 		secure_Logintest ln=new secure_Logintest();
 		ln.Login_testcase();
 		Secure_UpdatecourierStatus  SU=PageFactory.initElements(Driver, Secure_UpdatecourierStatus.class);
+		Baseclass BC=new Baseclass();
+		String Data3=BC.Cellread(0,1,2);
 		SU.UpdateCorier_status(Data3);
 	}
 	/*****************************************************************/
@@ -30,22 +32,5 @@ public class Secure_UpdateCourierStatus extends Secure_Baseclass
 	* End
 	*/
 	/*****************************************************************/
-	/*****************************************************************/
-	/*
-	* This bellow function helps pass data to UpdateCourierStatus_Testcase from excel sheet.
-	* And call the read function from configuration/Secure_Baseclass.class.
-	* @author Joydip.Bhattacharjee
-	*/
-	/*****************************************************************/
-	@DataProvider(name = "ReadData") 
-	public Object[][] sheetdetails() throws Exception
-	    {
-			Object[][] testObjArray=Secure_Baseclass.read(0);
-	    	return (testObjArray);   	
-	    }
-	/*****************************************************************/
-	/*
-	* End
-	*/
-	/*****************************************************************/
+
 }
