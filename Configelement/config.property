@@ -1,5 +1,5 @@
-URL=https://www.google.co.in
-BaseURL=http://122.49.211.14:8080
+URL=http://192.168.127.108/PWP_Manila_Dev
+BaseURL=http://192.168.127.108
 GmailUrl=https://accounts.google.com/
 GmailUsername=joydip.ilfs@gmail.com
 Gmailpassword=Test@123
@@ -16,6 +16,7 @@ SecureURL1=http://192.168.127.108:9094/LTCPSECURE/
 
 URL2=http://192.168.127.108:9094/PWP_Manila_Dev
 BaseURL2=http://192.168.127.108:9094
+SecureURL2=http://192.168.127.108:9094/LTCPSECURE_Manila_Dev
 
 URL3=http://122.49.211.14:8080/PWP/
 BaseURL3=http://122.49.211.14:8080
