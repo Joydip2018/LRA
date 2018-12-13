@@ -18,7 +18,7 @@
     <profile>
         <id>Client</id>
         <activation>
-        <activeByDefault>false</activeByDefault>
+        <activeByDefault>true</activeByDefault>
         </activation>
        <build>
 		<plugins>
@@ -54,7 +54,7 @@
     <profile>
         <id>Office</id>
         <activation>
-        <activeByDefault>true</activeByDefault>
+        <activeByDefault>false</activeByDefault>
         </activation>
        <build>
 		<plugins>
