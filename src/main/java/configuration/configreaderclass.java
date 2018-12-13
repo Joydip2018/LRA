@@ -25,7 +25,8 @@ public class configreaderclass
 	String GUname=pro.getProperty("GmailUsername");
 	String GPwd=pro.getProperty("Gmailpassword");
 	String Surl=pro.getProperty("SecureURL");
-	return new String[]{url,uname,pwd,Browsername,Gmail,GUname,GPwd,Surl};	
+	String Burl=pro.getProperty("BaseURL");
+	return new String[]{url,uname,pwd,Browsername,Gmail,GUname,GPwd,Surl,Burl};	
 	}
 	/*****************************************************************/
 	/*

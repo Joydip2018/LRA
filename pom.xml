@@ -76,7 +76,7 @@
 				<configuration>
 					<suiteXmlFiles>
 						<!-- TestNG suite XML files -->
-						<suiteXmlFile>Validation_testng.xml</suiteXmlFile>
+						<!-- <suiteXmlFile>Validation_testng.xml</suiteXmlFile>-->
 						<suiteXmlFile>Regression_testng.xml</suiteXmlFile>
 						<suiteXmlFile>Report_testng.xml</suiteXmlFile>
 						<!-- <suiteXmlFile>Report_testng.xml</suiteXmlFile>-->

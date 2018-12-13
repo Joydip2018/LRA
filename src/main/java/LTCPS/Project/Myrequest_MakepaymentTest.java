@@ -4,6 +4,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 import Screen.MyRequest_Makepayment;
 import configuration.Baseclass;
+import configuration.configreaderclass;
 
 public class Myrequest_MakepaymentTest  extends Baseclass
 {
@@ -29,7 +30,9 @@ public class Myrequest_MakepaymentTest  extends Baseclass
 		MM.makepayment("4111111111111111", "250");
 		String CurUrl=Driver.getCurrentUrl();
 		System.out.println(CurUrl);
-		String NewUrl=CurUrl.replace("http://125.19.63.165:9094","http://192.168.127.108:9094");
+		configreaderclass BC=new configreaderclass();
+		String[] str=BC.configreader();
+		String NewUrl=CurUrl.replace("http://125.19.63.165:9094",str[8]);
 		System.out.println(NewUrl);
 		Driver.get(NewUrl);	
 		Thread.sleep(3000);

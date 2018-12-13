@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="LTCPS.Project.Registrationtest">
+      <class name="LTCPS.Project.Myrequest_MakepaymentTest">
         <methods>
           <include name="closebrowser"/>
           <include name="setup"/>
+          <include name="MakePayment_Testcase"/>
           <include name="OpenBrowser"/>
-          <include name="Registration_TestCase" invocation-numbers="0 1"/>
         </methods>
-      </class> <!-- LTCPS.Project.Registrationtest -->
+      </class> <!-- LTCPS.Project.Myrequest_MakepaymentTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
