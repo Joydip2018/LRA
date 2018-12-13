@@ -6,7 +6,7 @@ Gmailpassword=Test@123
 Username=pclerk1
 password=Hello@123
 Browser=chrome
-SecureURL=http://192.168.127.108:9094/LTCPSECURE_Manila_Dev
+SecureURL=http://192.168.127.108/LTCPSECURE_Manila_Dev
 
 
 
