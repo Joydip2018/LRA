@@ -8,7 +8,7 @@
           <include name="closebrowser"/>
           <include name="setup"/>
           <include name="OpenBrowser"/>
-          <include name="Registration_TestCase" invocation-numbers="0"/>
+          <include name="Registration_TestCase" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- LTCPS.Project.Registrationtest -->
     </classes>
