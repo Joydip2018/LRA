@@ -15,7 +15,7 @@ public class UpdateProfileTest extends Baseclass
 	* @author Joydip.Bhattacharjee
 	*/
 	/*****************************************************************/
-	@Test(dataProvider = "ReadData")//(enabled = false)
+	@Test//(dataProvider = "ReadData")//(enabled = false)
 	public void Updateprofile_Testcase() throws Exception
 	{
 		Logintest ln=new Logintest();
