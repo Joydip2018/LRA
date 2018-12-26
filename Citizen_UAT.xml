@@ -8,34 +8,10 @@
   	<listener class-name="Utility.AnnotationTransformer"></listener>
   </listeners>
   
-<!-- <test thread-count="1" name="Test">
+  <test thread-count="1" name="Test">
     <classes>
-      <class name="LTCPS.Project.NewCertificatetest"/>
-          </classes>
-  </test>
-    <test thread-count="1" name="Test1">
-    <classes>
-      <class name="LTCPS.Project.Myrequest_MakepaymentTest"/>
-          </classes>
-  </test>
-      <test thread-count="1" name="Test2">
-    <classes>
-      <class name="LTCPS.Project.UpdateProfileTest"/>
-    </classes>
-  </test>
-  <test thread-count="1" name="Test3">
-    <classes>
-      <class name="LTCPS.Project.ChangePassTest"/>
-    </classes>
-  </test>
-   <test thread-count="1" name="Test4">
-   <classes>
-      <class name="LTCPS.Project.Transaction_monitortest"/>
-    </classes>
-  </test>-->
-  <test thread-count="1" name="Test5">
-    <classes>
-      <class name="LTCPS.Project.Logouttest"/>
+      <class name="client.ClientUATCitizen"/>
+      <class name="client.ClientUATSecure"/>
     </classes>
   </test>
   

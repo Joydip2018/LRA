@@ -1,12 +1,17 @@
 package Screen;
 
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import configuration.Basesuit;
 
@@ -75,6 +80,15 @@ public class MyRequest_Makepayment extends Basesuit
 	@FindBy(id="submitButton")
 	@CacheLookup
 	WebElement Submitbtn;
+	
+	@FindBy(xpath="//img[@src='static/images/gateway/no-success-icon.png']")
+	@CacheLookup
+	WebElement nosuccess;
+	
+	@FindBy(xpath="//a[contains(.,'here')]")
+	@CacheLookup
+	WebElement Clickhere;
+	
 	/*************************************************************/
 	/*
 	*  End
@@ -139,6 +153,33 @@ public class MyRequest_Makepayment extends Basesuit
 	{
 		HighlightOnElement(Submitbtn);
 		Submitbtn.click();
+	}
+	
+	public void no_success()
+	{
+		try
+		{
+		boolean x=nosuccess.isDisplayed();
+		if(x==true)
+		{
+			WebDriverWait wait=new WebDriverWait(Driver, 10);
+			wait.until(ExpectedConditions.visibilityOfAllElements(nosuccess));
+			if(nosuccess.isDisplayed())
+			{
+				HighlightOnElement(nosuccess);	
+				Assert.assertFalse(true);
+			}
+		}
+		}
+		catch(NoSuchElementException e)
+		{
+			System.out.println("Go for Next Step");
+		}
+	}
+	public void Click_here()
+	{
+		HighlightOnElement(Clickhere);
+		Clickhere.click();
 	}
 	/*****************************************************************/
 	/*

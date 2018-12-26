@@ -30,6 +30,8 @@ public class Myrequest_MakepaymentTest  extends Baseclass
 		MM.makepayment("4111111111111111", "250");
 		String CurUrl=Driver.getCurrentUrl();
 		System.out.println(CurUrl);
+		ScroolDown();
+		MM.no_success();
 		/*configreaderclass BC=new configreaderclass();
 		String[] str=BC.configreader();
 		String NewUrl=CurUrl.replace("http://125.19.63.165:9094",str[8]);

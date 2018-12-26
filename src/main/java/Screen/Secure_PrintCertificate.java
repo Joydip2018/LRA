@@ -55,6 +55,11 @@ public class Secure_PrintCertificate extends Basesuit
 	@FindBy(id="addbutton")
 	@CacheLookup
 	WebElement Print;
+	
+	@FindBy(xpath="//a[contains(.,'Dashboard')]")
+	@CacheLookup
+	WebElement Dashboard;
+
 	/*************************************************************/
 	/*
 	*  End
@@ -91,6 +96,13 @@ public class Secure_PrintCertificate extends Basesuit
 	{
 		HighlightOnElement(Print);
 		Print.click();
+	}
+	
+	public void Dashboard_link()
+	{
+		waitForPageLoad(Driver, Dashboard);
+		HighlightOnElement(Dashboard);
+		Dashboard.click();
 	}
 	/*****************************************************************/
 	/*

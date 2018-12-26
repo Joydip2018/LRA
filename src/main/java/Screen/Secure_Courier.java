@@ -65,6 +65,10 @@ public class Secure_Courier extends Basesuit
 	@FindBy(id="csdialog_close")
 	@CacheLookup
 	WebElement Savebtn;
+	
+	@FindBy(xpath="//a[contains(.,'Dashboard')]")
+	@CacheLookup
+	WebElement Dashboard;
 	/*************************************************************/
 	/*
 	*  End
@@ -113,6 +117,12 @@ public class Secure_Courier extends Basesuit
 		HighlightOnElement(Savebtn);
 		Savebtn.click();
 	}
+	public void Dashboard_link()
+	{
+		waitForPageLoad(Driver, Dashboard);
+		HighlightOnElement(Dashboard);
+		Dashboard.click();
+	}
 	/*****************************************************************/
 	/*
 	*  End
@@ -129,6 +139,7 @@ public class Secure_Courier extends Basesuit
 	{
 		
 		WebDriverWait wait=new WebDriverWait(Driver, 20);
+		waitForPageLoad(Driver,CourierDetails);
 		Courier_Details();
 		waitForPageLoad(Driver,UpdateCourier);
 		Update_Courier();

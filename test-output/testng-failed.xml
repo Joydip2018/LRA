@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite1]">
+  <parameter name="Reportname" value="Citizen_test_Report"/>
+  <listeners>
+    <listener class-name="Utility.Listener"/>
+    <listener class-name="Utility.AnnotationTransformer"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="LTCPS.Project.Myrequest_MakepaymentTest">
+      <class name="client.ClientUATCitizen">
         <methods>
           <include name="closebrowser"/>
           <include name="setup"/>
-          <include name="MakePayment_Testcase"/>
           <include name="OpenBrowser"/>
+          <include name="Client_UAT_Citizen"/>
         </methods>
-      </class> <!-- LTCPS.Project.Myrequest_MakepaymentTest -->
+      </class> <!-- client.ClientUATCitizen -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite1] -->
