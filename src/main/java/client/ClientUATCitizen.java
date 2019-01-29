@@ -9,6 +9,7 @@ import Screen.MyRequest_Makepayment;
 import Screen.NewCertificate;
 import Utility.WriteSheet;
 import configuration.Baseclass;
+import configuration.configreaderclass;
 
 public class ClientUATCitizen extends Baseclass
 {
@@ -48,6 +49,14 @@ public class ClientUATCitizen extends Baseclass
 		MM.makepayment("4111111111111111", "250");
 		String CurUrl=Driver.getCurrentUrl();
 		System.out.println(CurUrl);
+		
+		Thread.sleep(3000);
+		configreaderclass BC=new configreaderclass();
+		String[] str=BC.configreader();
+		String NewUrl=CurUrl.replace("http://125.19.63.165",str[8]);
+		System.out.println(NewUrl);
+		Driver.get(NewUrl);
+		
 		ScroolDown();
 		MM.no_success();
 		MM.Click_here();

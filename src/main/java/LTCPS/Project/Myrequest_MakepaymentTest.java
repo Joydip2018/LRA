@@ -32,11 +32,16 @@ public class Myrequest_MakepaymentTest  extends Baseclass
 		System.out.println(CurUrl);
 		ScroolDown();
 		MM.no_success();
+		Thread.sleep(3000);
 		/*configreaderclass BC=new configreaderclass();
 		String[] str=BC.configreader();
 		String NewUrl=CurUrl.replace("http://125.19.63.165:9094",str[8]);
 		System.out.println(NewUrl);
 		Driver.get(NewUrl);*/
+		
+		ScroolDown();
+		MM.no_success();
+		MM.Click_here();
 		Thread.sleep(3000);
 	}
 	/*****************************************************************/

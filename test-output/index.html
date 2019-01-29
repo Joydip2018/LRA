@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite1">
-              <span class="suite-name border-passed">Suite1</span>
+              <span class="suite-name border-failed">Suite1</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite1" class="hide-methods passed suite-Suite1"> (hide)</a> <!-- hide-methods passed suite-Suite1 -->
-                      <a href="#" panel-name="suite-Suite1" class="show-methods passed suite-Suite1"> (show)</a> <!-- show-methods passed suite-Suite1 -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite1" class="hide-methods failed suite-Suite1"> (hide)</a> <!-- hide-methods failed suite-Suite1 -->
+                      <a href="#" panel-name="suite-Suite1" class="show-methods failed suite-Suite1"> (show)</a> <!-- show-methods failed suite-Suite1 -->
                     </span>
-                    <div class="method-list-content passed suite-Suite1">
+                    <div class="method-list-content failed suite-Suite1">
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite1" title="client.ClientUATCitizen" hash-for-method="Client_UAT_Citizen">Client_UAT_Citizen</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Suite1 -->
+                    </div> <!-- method-list-content failed suite-Suite1 -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,9 +117,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite1" class="panel Suite1">
-          <div class="suite-Suite1-class-passed">
+          <div class="suite-Suite1-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">client.ClientUATCitizen</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -128,10 +128,15 @@
                   <a name="Client_UAT_Citizen">
                   </a> <!-- Client_UAT_Citizen -->
                   <span class="method-name">Client_UAT_Citizen</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [false] but found [true]
+	at Screen.MyRequest_Makepayment.no_success(MyRequest_Makepayment.java:170)
+	at client.ClientUATCitizen.Client_UAT_Citizen(ClientUATCitizen.java:61)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite1-class-passed -->
+          </div> <!-- suite-Suite1-class-failed -->
         </div> <!-- panel Suite1 -->
         <div panel-name="test-xml-Suite1" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -192,12 +197,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Client_UAT_Citizen')
 data.setCell(0, 2, 'client.ClientUATCitizen')
-data.setCell(0, 3, 50192);
+data.setCell(0, 3, 56541);
 window.suiteTableData['Suite1']= { tableData: data, tableDiv: 'times-div-Suite1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 50 seconds</span>
+              <span class="suite-total-time">Total running time: 56 seconds</span>
               <div id="times-div-Suite1">
               </div> <!-- times-div-Suite1 -->
             </div> <!-- times-div -->
@@ -230,15 +235,17 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">OpenBrowser</span>
-                <span class="method-start">183 ms</span>
+                <span class="method-start">173 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">Client_UAT_Citizen</span>
-                <span class="method-start">5996 ms</span>
+                <span class="method-start">5136 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closebrowser</span>
-                <span class="method-start">57037 ms</span>
+                <span class="method-start">62239 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

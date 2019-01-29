@@ -7,14 +7,14 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="client.ClientUATSecure">
+      <class name="client.ClientUATCitizen">
         <methods>
+          <include name="closebrowser"/>
           <include name="setup"/>
           <include name="OpenBrowser"/>
-          <include name="closebrowser"/>
-          <include name="Client_UAT_office"/>
+          <include name="Client_UAT_Citizen"/>
         </methods>
-      </class> <!-- client.ClientUATSecure -->
+      </class> <!-- client.ClientUATCitizen -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite1] -->

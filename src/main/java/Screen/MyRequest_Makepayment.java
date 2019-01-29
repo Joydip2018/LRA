@@ -208,11 +208,11 @@ public class MyRequest_Makepayment extends Basesuit
 		Bank_name();
 		waitForPageLoad(Driver,Processbtn);
 		Process_btn();
-		/*Card_Number(Crdno);
+		Card_Number(Crdno);
 		CVV2_Number(CVV);
 		EMonth();
 		EYear();
-		Submit_btn();*/
+		Submit_btn();
 		
 	}
 	/*****************************************************************/
