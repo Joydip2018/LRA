@@ -3,11 +3,10 @@ BaseURL=http://192.168.127.108
 GmailUrl=https://accounts.google.com/
 GmailUsername=joydip.ilfs@gmail.com
 Gmailpassword=Test@123
-Username=pclerk1
-password=Hello@123
+Username=pclerk2
+password=Pass@123
 Browser=chrome
 SecureURL=http://192.168.127.108/LTCPSECURE_Manila_Dev
-
 
 
 URL1=http://192.168.127.108:9094/PWP/
@@ -20,3 +19,6 @@ SecureURL2=http://192.168.127.108:9094/LTCPSECURE_Manila_Dev
 
 URL3=http://122.49.211.14:8080/PWP/
 BaseURL3=http://122.49.211.14:8080
+
+Username1=pclerk1
+password1=Hello@123

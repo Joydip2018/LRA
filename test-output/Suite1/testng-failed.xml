@@ -4,18 +4,17 @@
   <parameter name="Reportname" value="Citizen_test_Report"/>
   <listeners>
     <listener class-name="Utility.Listener"/>
-    <listener class-name="Utility.AnnotationTransformer"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="client.ClientUATCitizen">
+      <class name="client.ClientUATSecure">
         <methods>
-          <include name="closebrowser"/>
           <include name="setup"/>
           <include name="OpenBrowser"/>
-          <include name="Client_UAT_Citizen"/>
+          <include name="closebrowser"/>
+          <include name="Client_UAT_office"/>
         </methods>
-      </class> <!-- client.ClientUATCitizen -->
+      </class> <!-- client.ClientUATSecure -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite1] -->

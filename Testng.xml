@@ -5,13 +5,13 @@
 
   <listeners>
   	<listener class-name="Utility.Listener"></listener>
-    <listener class-name="Utility.AnnotationTransformer"></listener>
+  	<listener class-name="Utility.AnnotationTransformer"></listener>
   </listeners>
   
   <test thread-count="1" name="Test">
     <classes>
-      <class name="client.ClientUATCitizen"/>
-     <!-- <class name="client.ClientUATSecure"/> -->
+      <!-- <class name="LTCPS.Project.UpdateProfileTest"/> -->
+      <class name="LTCPS.Project.ChangePassTest"/>
     </classes>
   </test>
   

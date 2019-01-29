@@ -1,5 +1,6 @@
 package Screen;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -56,6 +57,10 @@ public class Secure_PrintCertificate extends Basesuit
 	@CacheLookup
 	WebElement Print;
 	
+	@FindBy(id="printYes")
+	@CacheLookup
+	WebElement PrintValidation;
+	
 	@FindBy(xpath="//a[contains(.,'Dashboard')]")
 	@CacheLookup
 	WebElement Dashboard;
@@ -104,6 +109,13 @@ public class Secure_PrintCertificate extends Basesuit
 		HighlightOnElement(Dashboard);
 		Dashboard.click();
 	}
+	
+	public void Print_Validation()
+	{
+		waitForPageLoad(Driver, PrintValidation);
+		HighlightOnElement(PrintValidation);
+		PrintValidation.click();
+	}
 	/*****************************************************************/
 	/*
 	*  End
@@ -130,9 +142,14 @@ public class Secure_PrintCertificate extends Basesuit
 		Validate_btn();
 		wait.until(ExpectedConditions.alertIsPresent());
 		Driver.switchTo().alert().accept();
+		ScroolDown();
+		Driver.findElement(By.xpath("//a[contains(text(),'Preview')]")).click();
+		Thread.sleep(2000);
+		Driver.findElement(By.xpath("//button[@id='showPDF_close']")).click();
 		Print_btn();
-		wait.until(ExpectedConditions.alertIsPresent());
-		Driver.switchTo().alert().accept();
+		//wait.until(ExpectedConditions.alertIsPresent());
+		//Driver.switchTo().alert().accept();
+		Print_Validation();
 	}
 	/*****************************************************************/
 	/*

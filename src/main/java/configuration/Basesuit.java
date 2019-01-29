@@ -39,7 +39,7 @@ public class Basesuit
 	/*****************************************************************/
 	@BeforeSuite(alwaysRun=true)
 	@Parameters({"Reportname"})
-	public void setup(@Optional String Reportname)
+	public void setup(String Reportname)
 	{
 		String xmlname=Reportname;
 	    ExtentHtmlReporter reporter=new ExtentHtmlReporter("./Screenshot/"+xmlname+".html");		
